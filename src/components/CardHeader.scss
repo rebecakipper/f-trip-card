@@ -1,0 +1,37 @@
+@use "styles" as *;
+
+.trip-card {
+    &__header {
+        background-color: rgb(214, 214, 214);
+        @include horizontal;
+        padding: 12px;
+        gap: 6px;
+
+        &-label {
+            @include vertical;
+            flex-grow: 1;
+        }
+    }
+
+    &__arrow-big {
+        padding: 0 6px;
+    }
+
+    &__destination {
+        @include horizontal;
+    }
+
+    &__arrow-button {
+        padding: 0;
+        display: flex;
+        color: black;
+        background-color: transparent;
+        border-radius: 6px;
+        border: none;
+        height: 100%;
+        cursor: pointer;
+        &:hover &:active {
+            background-color: rgba(0, 0, 0, 0.06);
+        }
+    }
+}
