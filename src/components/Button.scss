@@ -1,0 +1,25 @@
+@use "styles" as *;
+
+.button {
+    @include horizontal;
+    cursor: pointer;
+
+    border: none;
+    border-radius: 6px;
+    padding: 6px;
+    gap: 3px;
+    color: $color-text-primary;
+    background-color: transparent;
+
+    &--medium {
+        height: 36px; // size md
+    }
+
+    &:hover {
+        background-color: rgba(0, 0, 0, 0.06);
+    }
+
+    &-icon {
+        padding: 2px;
+    }
+}
