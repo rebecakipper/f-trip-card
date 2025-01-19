@@ -1,0 +1,22 @@
+$circle-diameter: 6px;
+$color-text-primary: #353535;
+$color-text-secondary: #646464;
+$color-borders: #c8c8c8;
+$color-background: #ffffff;
+
+@mixin horizontal {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+@mixin vertical {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+@mixin font-primary {
+    font-size: 16px;
+    line-height: 24px;
+}
