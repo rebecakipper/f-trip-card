@@ -1,0 +1,71 @@
+@use "styles" as *;
+
+.trip-card {
+    &__body {
+        @include vertical;
+        width: 100%;
+        padding: 24px;
+        gap: 12px;
+    }
+
+    &__connection {
+        @include vertical;
+        width: 100%;
+        padding-inline-start: 0px;
+        margin: 0;
+
+        &-element {
+            position: relative;
+            @include horizontal;
+            gap: 12px;
+            width: 100%;
+
+            &::before {
+                box-sizing: border-box;
+                display: block;
+                margin: 6px;
+                min-width: $circle-diameter * 2;
+                width: $circle-diameter * 2;
+                height: $circle-diameter * 2;
+                border: 2px solid grey;
+                border-radius: 50%;
+                content: "";
+            }
+
+            &::after {
+                content: "";
+                background-color: grey;
+                left: calc(($circle-diameter * 2) - 1px);
+                top: calc(
+                    50% + $circle-diameter
+                ); //half of the parent height + half of the circle
+                position: absolute;
+                width: 2px;
+                height: calc(100% - ($circle-diameter * 2));
+                z-index: 2;
+            }
+
+            &:last-child::after {
+                display: none;
+            }
+        }
+    }
+
+    &__location {
+        @include font-primary;
+        flex-grow: 1;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    &__time {
+        @include font-primary;
+        align-self: right;
+        white-space: nowrap;
+    }
+
+    &__sup {
+        visibility: hidden;
+    }
+}
