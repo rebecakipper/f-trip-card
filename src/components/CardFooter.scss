@@ -1,0 +1,9 @@
+@use "styles" as *;
+
+.trip-card {
+    &__footer {
+        padding: 12px 0;
+        @include horizontal;
+        justify-content: center;
+    }
+}
