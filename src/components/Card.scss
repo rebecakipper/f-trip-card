@@ -1,9 +1,55 @@
+@use "styles" as *;
+
 .card {
-    background-color: #ffffff;
+    background-color: $color-background;
     border-radius: 6px;
     overflow: hidden;
-    border: solid 1px #c8c8c8;
-    width: 351px;
-    // min-width: 351px;
-    height: 258px;
+    border: solid 1px $color-borders;
+    min-width: 351px;
+
+    p {
+        margin: 0;
+        padding: 0;
+        font-family: Roboto;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 18px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        color: $color-text-secondary;
+    }
+    sup {
+        margin: 0;
+        margin-left: 3px;
+        padding: 0;
+        font-family: Roboto;
+        font-weight: 400;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        color: $color-text-secondary;
+    }
+
+    h3 {
+        margin: 0;
+        padding: 0;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 24px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        color: $color-text-primary;
+    }
+
+    h4 {
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 24px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        color: $color-text-primary;
+    }
 }
