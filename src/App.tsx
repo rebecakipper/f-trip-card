@@ -4,7 +4,9 @@ import TripCard from "./components/TripCard";
 function App() {
     return (
         <>
-            <TripCard />
+            <div>
+                <TripCard />
+            </div>
         </>
     );
 }
